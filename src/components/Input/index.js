@@ -1,7 +1,7 @@
 import React from "react";
 import * as C from "./styles";
 
-const Input = ({ type, maxLength, placeholder, value, onChange }) => {
+const Input = ({ name, type, maxLength, placeholder, value, onChange }) => {
   return (
     <C.Input
       value={value}
@@ -9,6 +9,7 @@ const Input = ({ type, maxLength, placeholder, value, onChange }) => {
       onChange={onChange}
       type={type}
       placeholder={placeholder}
+      name={name}
     />
   );
 };

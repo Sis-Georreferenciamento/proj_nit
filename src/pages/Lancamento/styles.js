@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
+  
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  height: 100vh;
+  height: 90vh;
 `;
 
 export const Content = styled.div`
@@ -72,6 +72,19 @@ export const formStyle = {
   boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)'
 };
 
+export const Select = {
+  padding: '12px 10px',
+  outline: 'none',
+  border: '1px solid ',
+  borderRadius: '10px',
+  width: '100%',
+  cursor: 'pointer',
+  backgroundcolor: '#046ee5',
+  color: 'black',
+  fontweight: '600',
+  fontsize: '16px',
+  maxwidth: '300px'
+};
 
 
 
