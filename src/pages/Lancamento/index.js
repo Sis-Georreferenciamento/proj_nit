@@ -11,13 +11,15 @@ function Lancamento() {
         endereco: '',
         numeroEndereco: '',
         elemento: '',
-        tampa: '',
+        tampa: ['','','',''],
         entrada: '',
         saida: '',
-        diametrosEntrada: ['', '', ''],
+        diametrosEntrada: ['', '', '', ''],
         diametrosSaida: ['', '', ''],
         rede: '',
-        foto: null
+        observacao: '',
+        foto: null,
+        video:''
     });
 
     const [formErrors, setFormErrors] = useState({
@@ -28,7 +30,9 @@ function Lancamento() {
         entrada: false,
         saida: false,
         rede: false,
-        foto: false
+        observacao: false,
+        foto: false,
+        video: false
     });
 
     const handleChange = (e) => {
@@ -228,6 +232,7 @@ function Lancamento() {
                          
                             <select name="entrada" id="entrada" value={formData.entrada} onChange={handleChange} style={Select}>
                                 <option value="">Selecione...</option>
+                                <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -262,6 +267,24 @@ function Lancamento() {
                         <legend>Foto:</legend>
                         <fieldset>
                             <input type="file" name="foto" onChange={handleChange} /><br />
+                        </fieldset>
+                        <br />
+                        <legend>Vídeo:</legend>
+                        <fieldset>
+                            <input type="file" name="video"/><br />
+                        </fieldset>
+                        <br />
+                        <legend>Observação:</legend>
+                        <fieldset>
+                            <p>
+                        <Input 
+                                type="text" gi
+                                name="observacao" 
+                                value={formData.observacao} 
+                                onChange={handleChange} 
+                                placeholder="Observação..." 
+                            />
+                        </p>
                         </fieldset>
                         <br />
                         <Button type="submit" Text="Salvar" onClick={alert}>Enviar</Button>
