@@ -126,7 +126,9 @@ function Lancamento() {
                 diametrosEntrada: ['', '', ''],
                 diametrosSaida: ['', '', ''],
                 rede: '',
-                foto: null
+                observacao: '',
+                foto: null,
+                video: null
             });
         })
         .catch(error => {
