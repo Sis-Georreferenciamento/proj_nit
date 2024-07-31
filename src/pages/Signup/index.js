@@ -18,10 +18,10 @@ const Signup = () => {
 
   const handleSignup = () => {
     if (!email | !emailConf | !senha | !cpf) {
-      setError("Preencha todos os campos");
+      setError("Preencha todos os campos.");
       return;
     } else if (email !== emailConf) {
-      setError("Os e-mails não são iguais");
+      setError("Os e-mails não são iguais.");
       return;
     }
 
@@ -32,7 +32,7 @@ const Signup = () => {
       return;
     }
 
-    alert("Usuário cadatrado com sucesso!");
+    alert("Usuário cadastrado com sucesso!");
     navigate("/");
   };
 
@@ -43,26 +43,26 @@ const Signup = () => {
       <Input
           type="cpf"
           maxLength="11"
-          placeholder="Digite seu cpf"
+          placeholder="Digite seu cpf."
           value={cpf}
           cpf={"cpfMask"}
           onChange={(e) => [setCpf(e.target.value), setError("")]}
         />
         <Input
           type="email"
-          placeholder="Digite seu E-mail"
+          placeholder="Digite seu e-mail."
           value={email}
           onChange={(e) => [setEmail(e.target.value), setError("")]}
         />
         <Input
           type="email"
-          placeholder="Confirme seu E-mail"
+          placeholder="Confirme seu e-mail."
           value={emailConf}
           onChange={(e) => [setEmailConf(e.target.value), setError("")]}
         />
         <Input
           type="password"
-          placeholder="Digite sua Senha"
+          placeholder="Digite sua senha."
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
         />

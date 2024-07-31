@@ -30,10 +30,10 @@ export const AuthProvider = ({ children }) => {
         setUser({ email, password });
         return;
       } else {
-        return "E-mail ou senha incorretos";
+        return "E-mail ou senha incorretos.";
       }
     } else {
-      return "Usuário não cadastrado";
+      return "Usuário não cadastrado.";
     }
   };
 
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
     const hasUser = usersStorage?.filter((user) => user.email === email);
 
     if (hasUser?.length) {
-      return "Já tem uma conta com esse E-mail";
+      return "Conta já existente.";
     }
 
     let newUser;

@@ -15,7 +15,7 @@ const Signin = () => {
 
   const handleLogin = () => {
     if (!email | !senha) {
-      setError("Preencha todos os campos");
+      setError("Preencha todos os campos.");
       return;
     }
 
@@ -35,13 +35,13 @@ const Signin = () => {
       <C.Content>
         <Input
           type="email"
-          placeholder="Digite seu E-mail"
+          placeholder="Digite seu e-mail"
           value={email}
           onChange={(e) => [setEmail(e.target.value), setError("")]}
         />
         <Input
           type="password"
-          placeholder="Digite sua Senha"
+          placeholder="Digite sua senha"
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
         />
